@@ -1,25 +1,37 @@
 <div class="card-grafica">
-  <div class="canvas-preview">
+    <div class="canvas-preview">
 
-    <img [style.filter]="filtroScss()" src="../../../public/img.png">
+    <img class="preview-img"
+        [style.filter]="filtroScss()"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Sebastiano_Ricci_002.jpg/1280px-Sebastiano_Ricci_002.jpg">
 
     <div class="controler">
-      <label>Brillo: {{ brillo() }}</label>
-      <input type="range" min="0" max="200"
-             (input)="actualizar('brillo', $event)">
 
-      <label>Contraste: {{ contraste() }}</label>
-      <input type="range" min="0" max="200"
-             (input)="actualizar('contraste', $event)">
+        <div class="control-group">
+        <label>Brillo: {{ brillo() }}</label>
+        <input type="range" min="0" max="200"
+            (input)="actualizar('brillo', $event)">
+        </div>
 
-      <label>Blur: {{ blur() }}</label>
-      <input type="range" min="0" max="200"
-             (input)="actualizar('blur', $event)">
+        <div class="control-group">
+        <label>Contraste: {{ contraste() }}</label>
+        <input type="range" min="0" max="200"
+                (input)="actualizar('contraste', $event)">
+        </div>
+
+        <div class="control-group">
+            <label>Blur: {{ blur() }}</label>
+            <input  type="range" min="0" max="200"
+                    (input)="actualizar('blur', $event)">
+        </div>
+
     </div>
 
-    <div>
-      <button></button>
+    <div class="button-container">
+        <button class="sepia-btn" (click)="toggleSepia()">
+        Modo Sepia
+        </button>
     </div>
 
-  </div>
+    </div>
 </div>
