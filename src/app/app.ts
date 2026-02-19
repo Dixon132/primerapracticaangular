@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { EditorFiltro } from './editor-filtro/editor-filtro';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [EditorFiltro],
+  template: `<app-editor-filtro></app-editor-filtro>`,
 })
-export class App {
-  protected readonly title = signal('primerapracticaangular');
-}
+export class App { }
