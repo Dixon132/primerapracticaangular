@@ -20,6 +20,7 @@ export class EditorFiltro {
 
     if (this.modoVintage()) {
       return base + `
+      contrast(55%)
       sepia(60%)
       saturate(90%)
       grayscale(40%)
@@ -38,7 +39,7 @@ export class EditorFiltro {
   }
 
   toggleSepia() {
-    this.modoVintage.update(v => !v);
+    this.modoVintage.update(mv => !mv);
   }
 
 }
